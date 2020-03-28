@@ -1,9 +1,18 @@
-regular = ["Hello there, and how are you?"]
-
-def reverse_each_word(words)
-  reversed_words= []
-  words.each do |word|
-    reversed_words << "#{word}"
+reverse_each_word_with_each(string)
+  
+  original_array = string.split(" ")
+  return_array = []
+  original_array.each do|string|
+    return_array << string.reverse
   end
-  reversed_words.reverse
+  return_array.join(" ")
+end
+
+def reverse_each_word(string)
+  array = string.split(" ")
+  test_array = []
+  array.collect do|string|
+    test_array << string.reverse
+  end
+  test_array.join(" ")
 end
